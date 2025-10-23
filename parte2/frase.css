@@ -8,3 +8,38 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#testoAlternato {
+  border: 5px solid black;
+  padding: 40px 60px;
+}
+
+#testoAlternato p {
+  font-size: 2rem;
+  color: black;
+}
+
+@keyframes fallen {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+
+.parole {
+  color: aqua;
+  animation: fallen 2s linear 1s infinite;
+}
