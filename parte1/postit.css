@@ -1,0 +1,81 @@
+/* LAVAGNA */
+body {
+  margin: 0;
+  background-color: #555;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* Uso Wrap per mandare aa capo i postit; con GAP faccio spazio tra i postit */
+.lavagna {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+
+/* SVILUPPO POSTIT CON BOXSHADOW + h3 e P */
+.postit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 180px;
+  height: 160px;
+  background: linear-gradient(#fffcb1, #f0e68c);
+  border-radius: 8px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.postit h3 {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+.postit p {
+  margin: 0.5rem 0 0;
+  font-size: 1.5rem;
+}
+
+/* APPLICO ROTATE PER RUOTARE I POSTIT */
+.postit:nth-of-type(1) {
+  background: linear-gradient(#fffcb1, #f0e68c);
+  transform: rotate(-6deg);
+}
+.postit:nth-of-type(2) {
+  background: linear-gradient(#c8ffd7, #a8f0b8);
+  transform: rotate(4deg);
+}
+.postit:nth-of-type(3) {
+  background: linear-gradient(#cfc9ff, #b3aaff);
+  transform: rotate(-3deg);
+}
+.postit:nth-of-type(4) {
+  background: linear-gradient(#d6ffda, #baffc5);
+  transform: rotate(2deg);
+}
+.postit:nth-of-type(5) {
+  background: linear-gradient(#fffcb1, #f0e68c);
+  transform: rotate(-5deg);
+}
+.postit:nth-of-type(6) {
+  background: linear-gradient(#cfc9ff, #b3aaff);
+  transform: rotate(5deg);
+}
+.postit:nth-of-type(7) {
+  background: linear-gradient(#fffcb1, #f0e68c);
+  transform: rotate(3deg);
+}
+.postit:nth-of-type(8) {
+  background: linear-gradient(#d6ffda, #baffc5);
+  transform: rotate(-4deg);
+}
+
+/* USO HOVER PER MUOVERE IL POSTIT */
+.postit:hover {
+  transform: rotate(0deg) scale(1.08);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.4);
+}
