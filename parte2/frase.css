@@ -41,5 +41,7 @@ body {
 
 .parole {
   color: aqua;
+  display: flex;
+  flex-direction: column;
   animation: fallen 2s linear 1s infinite;
 }
